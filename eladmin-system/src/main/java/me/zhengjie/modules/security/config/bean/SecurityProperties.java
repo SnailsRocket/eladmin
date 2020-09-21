@@ -22,8 +22,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Jwt参数配置
  *
- * @author Zheng Jie
- * @date 2019年11月28日
+ * @author Druid
+ * @date 2020年09月21日
  */
 @Data
 public class SecurityProperties {
