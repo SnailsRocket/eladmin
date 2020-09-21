@@ -61,6 +61,8 @@ public class LoginProperties {
         if (Objects.isNull(loginCode)) {
             loginCode = new LoginCode();
             if (Objects.isNull(loginCode.getCodeType())) {
+//                设置验证码的类型为数字 ,loginCode 这个类里面使用了@Data注解，所以不用写Get Set toString() equals() hashCode()
+//                也可以使用@Getter @Setter注解
                 loginCode.setCodeType(LoginCodeEnum.arithmetic);
             }
         }
