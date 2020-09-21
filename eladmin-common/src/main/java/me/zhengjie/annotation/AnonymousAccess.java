@@ -20,6 +20,7 @@ import java.lang.annotation.*;
 /**
  * @author jacky
  *  用于标记匿名访问方法
+ *  common/src/main/java/me/zhengjie/annotation 下面都是自定义的注解
  */
 @Inherited
 @Documented

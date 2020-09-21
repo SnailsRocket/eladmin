@@ -124,6 +124,11 @@ public class AuthorizationController {
         return ResponseEntity.ok(SecurityUtils.getCurrentUser());
     }
 
+    /**
+     * @AnonymousGetMapping 是自定义注解 支持匿名访问的 GetMapping
+     *
+     * @return
+     */
     @ApiOperation("获取验证码")
     @AnonymousGetMapping(value = "/code")
     public ResponseEntity<Object> getCode() {

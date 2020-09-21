@@ -22,11 +22,18 @@ import java.util.*;
  * 分页工具
  * @author Zheng Jie
  * @date 2018-12-10
+ * 一盘都把分页功能抽取出来写成一个工具类
+ *
  */
 public class PageUtil extends cn.hutool.core.util.PageUtil {
 
     /**
      * List 分页
+     *
+     * @param page
+     * @param size  当前页面展示的条数
+     * @param list
+     * @return
      */
     public static List toPage(int page, int size , List list) {
         int fromIndex = page * size;

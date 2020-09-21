@@ -32,6 +32,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * methods.
  * <p>
  * 支持匿名访问   GetMapping
+ * 比GetMapping注解 多了一个 @AnonymousAccess
+ * 自定义注解步骤
+ * 1、自定义注解类
+ * 2、处理注解的工具类
+ * 3、后面还需要一个注解处理器类  利用反射解析注解
  *
  * @author liaojinlong
  * @see RequestMapping
