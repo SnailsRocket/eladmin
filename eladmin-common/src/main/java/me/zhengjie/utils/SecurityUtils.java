@@ -39,6 +39,12 @@ public class SecurityUtils {
     /**
      * 获取当前登录的用户
      * @return UserDetails
+     * SecurityContextHolder  核心组件
+     * 每个用户都有SecurityContext  存储在 SecurityContextHolder 中
+     * SecurityContextHolder 存储 SecurityContext 分应用场景 单机系统  多用户系统
+     *
+     * SpringContextHolder.getBean() 将 UserDetailsService.class 这个Bean自动转型为赋值对象的类型
+     *
      */
     public static UserDetails getCurrentUser() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

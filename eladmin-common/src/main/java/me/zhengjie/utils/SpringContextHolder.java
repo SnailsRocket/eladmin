@@ -27,6 +27,8 @@ import java.util.List;
 /**
  * @author Jie
  * @date 2019-01-07
+ * 存放SpringContext  上下文
+ *
  */
 @Slf4j
 public class SpringContextHolder implements ApplicationContextAware, DisposableBean {
@@ -61,6 +63,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
 
     /**
      * 从静态变量applicationContext中取得Bean, 自动转型为所赋值对象的类型.
+     *
      */
     public static <T> T getBean(Class<T> requiredType) {
         assertContextInjected();

@@ -173,6 +173,7 @@ public class RedisUtils {
      * @param key 可以传一个值 或多个
      */
     public void del(String... keys) {
+//        加上这个判断程序的健壮性更强，如果这个判断，没有参数传过来，也会执行else里面的操作，将去redis里面删除key，但是此时的key=null，会出异常
         if (keys != null && keys.length > 0) {
             if (keys.length == 1) {
                 boolean result = redisTemplate.delete(keys[0]);

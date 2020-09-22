@@ -28,11 +28,11 @@ import java.util.stream.Collectors;
 /**
  * @author Druid
  * @date 2020-9-21
- *  DTO 类
+ *  DTO 类 extends UserDetails(这个类是SpringSecurity core 提供的)
  * @JsonIgnore 类注解
  * 放在属性和方法上面 ， 表示 生成JSON的时候，忽略该属性和方法(序列化和反序列化也包括Object转换成JSON)
  * 对象只有继承 Serializable 接口的对象才能被序列化
- *
+ * sh 致宇
  */
 @Getter
 @AllArgsConstructor

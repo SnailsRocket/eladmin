@@ -53,10 +53,11 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Zheng Jie
- * @date 2018-11-23
+ * @author Druid
+ * @date 2020-9-22
  * 授权、根据token获取用户详细信息
  * git update
+ *
  */
 @Slf4j
 @RestController
@@ -150,6 +151,14 @@ public class AuthorizationController {
         return ResponseEntity.ok(imgResult);
     }
 
+    /**
+     * @ApiOperation 是 swagger 的注解
+     * HttpStatus 这个也是Spring - web 提供的状态码类
+     * 之前做的比较low，都是自定义的，自定义的返回类，自定义的状态码
+     *
+     * @param request
+     * @return
+     */
     @ApiOperation("退出登录")
     @AnonymousDeleteMapping(value = "/logout")
     public ResponseEntity<Object> logout(HttpServletRequest request) {

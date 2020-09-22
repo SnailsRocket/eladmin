@@ -113,11 +113,12 @@ public class OnlineUserService {
 
     /**
      * 退出登录，获取在线用户的key，然后根据key 去删除 redis里面用户的数据，用户每次登录都会去redis里面查询
-     * @param token /
+     * @param token
      *
      */
     public void logout(String token) {
         String key = properties.getOnlineKey() + token;
+//        这个方法可以传入多个key ，删除之前会判断 key.length
         redisUtils.del(key);
     }
 
