@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * @author Zheng Jie
+ * @author Druid
  * @date 2019年10月26日21:56:27
  */
 @Service
@@ -59,6 +59,7 @@ public class OnlineUserService {
         try {
             onlineUserDto = new OnlineUserDto(jwtUserDto.getUsername(), jwtUserDto.getUser().getNickName(), dept, browser , ip, address, EncryptUtils.desEncrypt(token), new Date());
         } catch (Exception e) {
+//            使用 slf4j 提供的 日志接口
             log.error(e.getMessage(),e);
         }
         redisUtils.set(properties.getOnlineKey() + token, onlineUserDto, properties.getTokenValidityInSeconds()/1000);
@@ -111,8 +112,9 @@ public class OnlineUserService {
     }
 
     /**
-     * 退出登录
+     * 退出登录，获取在线用户的key，然后根据key 去删除 redis里面用户的数据，用户每次登录都会去redis里面查询
      * @param token /
+     *
      */
     public void logout(String token) {
         String key = properties.getOnlineKey() + token;

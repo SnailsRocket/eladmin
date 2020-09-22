@@ -22,7 +22,9 @@ import java.util.Date;
 
 /**
  * 在线用户
- * @author Zheng Jie
+ * @author Druid
+ * @AllArgsConstructor  添加一个全参构造函数
+ * @NoArgsConstructor   添加一个无参构造函数
  */
 @Data
 @AllArgsConstructor

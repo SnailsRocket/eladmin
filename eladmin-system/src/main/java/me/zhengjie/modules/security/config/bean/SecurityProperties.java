@@ -21,9 +21,10 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Jwt参数配置
- *
+ * @Data 所以不需要写 set get
  * @author Druid
  * @date 2020年09月21日
+ *
  */
 @Data
 public class SecurityProperties {

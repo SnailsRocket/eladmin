@@ -43,7 +43,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
- * @author /
+ * @author Druid
+ *
  */
 @Slf4j
 @Component
@@ -136,9 +137,16 @@ public class TokenProvider implements InitializingBean {
         }
     }
 
+    /**
+     * SecurityProperties 是 jwt参数配置类 里面有请求头header tokenStartWith base64Secret  tokenValidityInSeconds codeKey
+     * @param request
+     * @return
+     */
     public String getToken(HttpServletRequest request) {
         final String requestHeader = request.getHeader(properties.getHeader());
         if (requestHeader != null && requestHeader.startsWith(properties.getTokenStartWith())) {
+//            System.out.println(requestHeader.substring(7));
+//            截取令牌前缀 Bearer  (注意后面有一个空格，刚好7个)，
             return requestHeader.substring(7);
         }
         return null;
