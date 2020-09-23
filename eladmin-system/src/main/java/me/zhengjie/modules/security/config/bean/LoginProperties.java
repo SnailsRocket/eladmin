@@ -74,6 +74,7 @@ public class LoginProperties {
      * 依据配置信息生产验证码
      * 这个校验logicCode 的类型 为什么需要 上锁
      * 如果在高并发的场景下 ， 两个线程 同时调用 switchCaptcha方法，判断验证码的type，会创建多个不同type的captcha对象
+     * synchronized 用来实现 临界资源的同步互斥访问，是可重入的，可重入最大的作用是为了避免死锁
      *
      * @param loginCode 验证码配置信息
      * @return /
