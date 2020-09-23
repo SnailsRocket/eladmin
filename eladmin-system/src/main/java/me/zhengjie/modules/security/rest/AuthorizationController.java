@@ -71,6 +71,11 @@ public class AuthorizationController {
     private final OnlineUserService onlineUserService;
     private final TokenProvider tokenProvider;
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
+
+    /**
+     * 在ConfigBeanConfiguration 类中被初始化
+     *
+     */
     @Resource
     private LoginProperties loginProperties;
 

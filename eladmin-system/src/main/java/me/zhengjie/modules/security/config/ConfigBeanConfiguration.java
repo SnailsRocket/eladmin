@@ -23,6 +23,9 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @apiNote 配置文件转换Pojo类的 统一配置 类
+ * 这个配置Bean 初始化了 LoginProperties 和 SecurityProperties
+ * 之前还奇怪为什么在AuthorizationController 这个里面 LoginProperties这个实体类已经初始化了
+ *
  * @author: liaojinlong
  * @date: 2020/6/10 19:04
  */
