@@ -56,7 +56,7 @@ import java.util.concurrent.TimeUnit;
  * @author Druid
  * @date 2020-9-22
  * 授权、根据token获取用户详细信息
- * git update
+ * 代码模块分的这么清楚，也是重构来的，
  *
  *
  */

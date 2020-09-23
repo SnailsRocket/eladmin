@@ -45,6 +45,7 @@ import java.util.stream.Collectors;
 /**
  * @author Druid
  *
+ *
  */
 @Slf4j
 @Component
@@ -123,6 +124,7 @@ public class TokenProvider implements InitializingBean {
 
     /**
      * @param token 需要检查的token
+     *
      */
     public void checkRenewal(String token) {
         // 判断是否续期token,计算token的过期时间
