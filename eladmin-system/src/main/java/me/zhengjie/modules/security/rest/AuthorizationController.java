@@ -74,7 +74,8 @@ public class AuthorizationController {
 
     /**
      * 在ConfigBeanConfiguration 类中被初始化
-     *
+     * 也是因为在 ConfigBeanConfiguration 中将LoginProperties 定义为Bean ，注入到Spring容器里面，所以这里才可以从容器里面取
+     * 注意：能定义bean只能在 以下两种类型的类中 配置类(@Configuration) 或者 启动类(@SpringBootApplication)
      */
     @Resource
     private LoginProperties loginProperties;
@@ -83,6 +84,7 @@ public class AuthorizationController {
      * 这个password 在前端发请求之前 就已经使用RSA 加密过了，所以传到后端来的时候是通过公钥(publicKey) 加密过的，然后传到后端来使用私钥解密
      * RSA 是非对称加密算法，
      * 页面刷新的时候验证码存入redis里面，然后登录的时候，去redis里面取，验证码设置了过期时间
+     *
      * @param authUser
      * @param request
      * @return
