@@ -64,7 +64,6 @@ public class DeployController {
 
 	@Log("查询部署")
     @ApiOperation(value = "查询部署")
-    @GetMapping
 	@PreAuthorize("@el.check('deploy:list')")
     public ResponseEntity<Object> query(DeployQueryCriteria criteria, Pageable pageable){
     	return new ResponseEntity<>(deployService.queryAll(criteria,pageable),HttpStatus.OK);

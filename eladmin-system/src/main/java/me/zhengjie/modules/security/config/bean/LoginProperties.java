@@ -18,6 +18,7 @@ package me.zhengjie.modules.security.config.bean;
 import com.wf.captcha.*;
 import com.wf.captcha.base.Captcha;
 import lombok.Data;
+import lombok.Synchronized;
 import me.zhengjie.exception.BadConfigurationException;
 import me.zhengjie.utils.StringUtils;
 
@@ -71,12 +72,15 @@ public class LoginProperties {
 
     /**
      * 依据配置信息生产验证码
+     * 这个校验logicCode 的类型 为什么需要 上锁
+     * 如果在高并发的场景下 ， 两个线程 同时调用 switchCaptcha方法，判断验证码的type，会创建多个不同type的captcha对象
      *
      * @param loginCode 验证码配置信息
      * @return /
      */
     private Captcha switchCaptcha(LoginCode loginCode) {
         Captcha captcha;
+//        这里上锁了 控制并发冲突 生成验证码这个method
         synchronized (this) {
             switch (loginCode.getCodeType()) {
                 case arithmetic:
