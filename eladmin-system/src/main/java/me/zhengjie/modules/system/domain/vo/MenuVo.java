@@ -23,6 +23,7 @@ import java.util.List;
 
 /**
  * 构建前端路由时用到
+ * Menu View Object  前端对象  DTO  -> VO   PO -> DTO
  * @author Zheng Jie
  * @date 2018-12-20
  */
