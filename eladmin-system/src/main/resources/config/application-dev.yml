@@ -52,7 +52,7 @@ login:
   single: false
   #  验证码
   login-code:
-    #  验证码类型配置 查看 LoginProperties 类
+    #  验证码类型配置 查看 LoginProperties 类 我说在controller 里面修改怎么没作用，原来是这个地方设置了
     code-type: arithmetic
     #  登录图形验证码有效时间/分钟
     expiration: 2

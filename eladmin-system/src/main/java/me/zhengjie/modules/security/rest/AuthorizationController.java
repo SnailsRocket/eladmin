@@ -152,7 +152,7 @@ public class AuthorizationController {
         }
         // 验证码保存到 redis 里面，登录的时候 参数 key value time time_type  过期时间为两分钟
         redisUtils.set(uuid, captchaValue, loginProperties.getLoginCode().getExpiration(), TimeUnit.MINUTES);
-        // 验证码信息
+        // 验证码信息 前端接收到 captcha.toBase64()(这个是easy-captcha.jar 提供的方法) 直接放在 <img src="captcha.toBase64()"> 里面就可以显示验证码
         Map<String, Object> imgResult = new HashMap<String, Object>(2) {{
             put("img", captcha.toBase64());
             put("uuid", uuid);

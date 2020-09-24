@@ -32,12 +32,22 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigBeanConfiguration {
 
+    /**
+     * ConfigurationProperties 这个注解会读取application-dev.yml 里面的login下面的配置信息，并将对应的属性写入到 LoginProperties
+     * 这个Bean里面去，并注入到Spring容器里面
+     *
+     * @return
+     */
     @Bean
     @ConfigurationProperties(prefix = "login", ignoreUnknownFields = true)
     public LoginProperties loginProperties() {
         return new LoginProperties();
     }
 
+    /**
+     * 这类就是截取 application-dev.yml 配置文件里面的jwt 部分的属性，并加载到SecurityProperties这个Bean里面
+     * @return
+     */
     @Bean
     @ConfigurationProperties(prefix = "jwt", ignoreUnknownFields = true)
     public SecurityProperties securityProperties() {
