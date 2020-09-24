@@ -41,6 +41,7 @@ public class ConfigBeanConfiguration {
     @Bean
     @ConfigurationProperties(prefix = "login", ignoreUnknownFields = true)
     public LoginProperties loginProperties() {
+        System.out.println("ConfigBeanConfiguration配置类的loginProperties Bean 注入容器");
         return new LoginProperties();
     }
 
