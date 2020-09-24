@@ -95,6 +95,8 @@ public class SecurityUtils {
 
     /**
      * 获取数据权限级别
+     * 如果 dataScopes 不为空  返回 "" 有点不懂
+     *
      * @return 级别
      */
     public static String getDataScopeType() {
