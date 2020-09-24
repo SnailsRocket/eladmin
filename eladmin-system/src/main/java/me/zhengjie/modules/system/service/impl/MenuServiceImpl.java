@@ -232,6 +232,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     /**
+     * 新建这个 HashSet 是干嘛用的  set 用来过滤重复的数据
      *
      * @param menuDtos 原始数据
      * @return
