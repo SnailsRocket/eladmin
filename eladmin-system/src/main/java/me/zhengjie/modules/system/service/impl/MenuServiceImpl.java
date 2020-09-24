@@ -231,6 +231,11 @@ public class MenuServiceImpl implements MenuService {
         return getSuperior(findById(menuDto.getPid()), menus);
     }
 
+    /**
+     *
+     * @param menuDtos 原始数据
+     * @return
+     */
     @Override
     public List<MenuDto> buildTree(List<MenuDto> menuDtos) {
         List<MenuDto> trees = new ArrayList<>();

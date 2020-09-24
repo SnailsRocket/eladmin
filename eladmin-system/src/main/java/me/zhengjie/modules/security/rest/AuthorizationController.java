@@ -113,7 +113,8 @@ public class AuthorizationController {
         // 生成令牌
         String token = tokenProvider.createToken(authentication);
         final JwtUserDto jwtUserDto = (JwtUserDto) authentication.getPrincipal();
-        // 保存在线信息
+        // 保存在线信息  这个地方有一道场景题， 如果redis 和 数据库中登录信息(token/session)同时过期(数据库里面怎么会过期，定时删除么？)，但是用户在活跃状态，
+//        这个时候先去写数据库中的数据，还是先写redis中的数据，安全性考虑去写数据库，但是如果基于高可用还是建议写redis(如果直接写数据库会导致查询token打到数据库)
         onlineUserService.save(jwtUserDto, token, request);
         // 返回 token 与 用户信息
         Map<String, Object> authInfo = new HashMap<String, Object>(2) {{

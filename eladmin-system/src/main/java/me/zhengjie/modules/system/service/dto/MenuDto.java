@@ -25,6 +25,7 @@ import java.util.Objects;
 /**
  * @author Zheng Jie
  * @date 2018-12-17
+ * 菜单栏DTO
  */
 @Getter
 @Setter
