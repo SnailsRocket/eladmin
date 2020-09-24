@@ -22,6 +22,8 @@ import java.sql.Timestamp;
 import java.util.List;
 
 /**
+ * 部门查询条件封装类
+ * http://localhost:8013/api/dept?enabled=true&pid=7
 * @author Zheng Jie
 * @date 2019-03-25
 */

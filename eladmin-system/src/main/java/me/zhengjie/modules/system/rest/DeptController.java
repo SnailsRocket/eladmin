@@ -36,6 +36,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
+ * http://localhost:8013/api/dept?enabled=true&pid=7
+ * 这个
+ *
 * @author Zheng Jie
 * @date 2019-03-25
 */
@@ -56,6 +59,14 @@ public class DeptController {
         deptService.download(deptService.queryAll(criteria, false), response);
     }
 
+    /**
+     * @PreAuthorize 这个注解  鉴权 调用当前方法需要 'user:list','dept:list' 这两个权限
+     * 用户 角色 权限
+     *
+     * @param criteria
+     * @return
+     * @throws Exception
+     */
     @Log("查询部门")
     @ApiOperation("查询部门")
     @GetMapping
