@@ -30,6 +30,7 @@ import java.util.List;
 /**
  * @author Zheng Jie
  * @date 2019-01-07
+ * 定时任务注入
  */
 @Component
 @RequiredArgsConstructor
