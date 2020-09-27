@@ -22,7 +22,8 @@ public class UnsafeArrayListTest {
     public static List<String> vector = new Vector<>();
 
     public static void main(String[] args) {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
+//            int finalI = i;
             new Thread(() -> {
                 try {
                     Thread.sleep(50);
@@ -39,6 +40,10 @@ public class UnsafeArrayListTest {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+        System.out.println("af");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
         System.out.println(list.size());
         System.out.println(vector.size());
