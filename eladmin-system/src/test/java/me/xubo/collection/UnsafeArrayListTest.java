@@ -11,6 +11,10 @@ import java.util.Vector;
  * 测试 ArrayList  与  Vector的线程安全
  * for循环里面创建匿名的线程  遍历100 次 不会出现异常
  *
+ * 为什么会出现 list.size()<1000 这种情况了
+ * 解析：当一个Thread add(97) ,另一个add(98)  在这之前list最后一次add是(96),但是下次add()的时候，可能97 98 都没有执行完，还是停留在96
+ * 也不应该啊，97 98 执行完也会增加size，只能使用线程安全来解决这个现象
+ *
  */
 public class UnsafeArrayListTest {
 
