@@ -34,6 +34,11 @@ import java.util.Optional;
 /**
  * @author Zheng Jie
  * @date 2018-12-26
+ * https://blog.csdn.net/qq_29411737/article/details/80835658
+ * 相比直接 new 有什么优势？
+ * 61  EmailConfig::new  JDK1.8 新特性 构造器引用
+ *     String[]::new  数组引用
+ *
  */
 @Service
 @RequiredArgsConstructor

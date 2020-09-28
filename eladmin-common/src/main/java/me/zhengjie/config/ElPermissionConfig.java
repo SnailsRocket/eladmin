@@ -24,12 +24,13 @@ import java.util.stream.Collectors;
 
 /**
  * @author Zheng Jie
+ * 在验证的时候默认给admin用户放行
  */
 @Service(value = "el")
 public class ElPermissionConfig {
 
     public Boolean check(String ...permissions){
-        // 获取当前用户的所有权限
+        // 获取当前用户的所有权限  JDK1.8 新特性 Stream API
         List<String> elPermissions = SecurityUtils.getCurrentUser().getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
         // 判断当前用户的所有权限是否包含接口上定义的权限
         return elPermissions.contains("admin") || Arrays.stream(permissions).anyMatch(elPermissions::contains);

@@ -3,6 +3,8 @@ package me.xubo.test;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.jsonwebtoken.lang.Collections;
@@ -11,6 +13,7 @@ import io.jsonwebtoken.lang.Collections;
  * @Author Druid_Xu
  * @Description TODO
  * @Date 2020/9/28 下午 02:23
+ * JDK 1.8 新特性 Stream API
  */
 public class JdkNewFeture {
 
@@ -22,6 +25,8 @@ public class JdkNewFeture {
         list.add(new People("chenzi",25,"男","4123513235"));
         list.add(new People("kun",26,"男","12343543"));
         list_result = list.stream().map(People::getName).collect(Collectors.toList());
+
+         Supplier<People> people = People::new;
 
         for (String s : list_result) {
             System.out.println(s);

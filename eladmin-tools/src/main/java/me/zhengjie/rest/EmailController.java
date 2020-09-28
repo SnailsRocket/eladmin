@@ -22,6 +22,8 @@ import me.zhengjie.annotation.Log;
 import me.zhengjie.domain.vo.EmailVo;
 import me.zhengjie.domain.EmailConfig;
 import me.zhengjie.service.EmailService;
+import me.zhengjie.service.impl.EmailServiceImpl;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -31,6 +33,7 @@ import org.springframework.web.bind.annotation.*;
  * 发送邮件
  * @author 郑杰
  * @date 2018/09/28 6:55:53
+ *
  */
 @RestController
 @RequiredArgsConstructor
