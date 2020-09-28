@@ -28,6 +28,8 @@ import org.springframework.stereotype.Component;
  * 线程池允许的最大线程数
  * 线程空闲时间
  * 任务队列容量(阻塞队列)
+ * @ConfigurationProperties SpringBoot 提供的注解  prefix 绑定配置文件application.yml中的配置信息
+ *
  */
 @Data
 @Component

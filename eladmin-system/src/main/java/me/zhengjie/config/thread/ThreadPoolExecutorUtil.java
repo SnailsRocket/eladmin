@@ -25,6 +25,10 @@ import java.util.concurrent.TimeUnit;
  * 用于获取自定义线程池
  * @author Zheng Jie
  * @date 2019年10月31日18:16:47
+ *
+ * 首先从Spring上下文 (容器里面获取AsyncTaskProperties 这个线程池配置 Bean)
+ * 然后创建线程池
+ * 注意； 这个Bean 里面属性先需要给他赋值
  */
 public class ThreadPoolExecutorUtil {
 
