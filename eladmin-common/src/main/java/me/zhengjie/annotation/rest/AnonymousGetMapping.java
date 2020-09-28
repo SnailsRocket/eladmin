@@ -38,6 +38,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 2、处理注解的工具类
  * 3、后面还需要一个注解处理器类  利用反射解析注解
  *
+ * 获取验证码的时候还没有登录，但凡使用到@AnonymousGetMapping这个注解的都直接给放行，不需要权限校验
+ * @AnonymousAccess 在我们使用的时候，有写接口是不需要验证权限，这个时候就需要我们给接口放行，使用方式如下
+ *
+ *
  * @author liaojinlong
  * @see RequestMapping
  */

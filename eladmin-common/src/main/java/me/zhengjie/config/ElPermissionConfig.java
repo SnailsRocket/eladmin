@@ -25,6 +25,10 @@ import java.util.stream.Collectors;
 /**
  * @author Zheng Jie
  * 在验证的时候默认给admin用户放行
+ * elPermissions.contains("admin")  这个是后来加上的，
+ * 由于每个接口都需要给admin用户放行，而使用hasAnyRole('admin','user:list')每次都需要重复的添加 admin 权限
+ * 因此在新版本 (2.3) 中加入了自定义权限验证方式，在验证的时候默认给拥有admin权限的用户放行
+ *
  */
 @Service(value = "el")
 public class ElPermissionConfig {
@@ -32,7 +36,7 @@ public class ElPermissionConfig {
     public Boolean check(String ...permissions){
         // 获取当前用户的所有权限  JDK1.8 新特性 Stream API
         List<String> elPermissions = SecurityUtils.getCurrentUser().getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
-        // 判断当前用户的所有权限是否包含接口上定义的权限
+        // 判断当前用户的所有权限是否包含接口上定义的权限或者是admin
         return elPermissions.contains("admin") || Arrays.stream(permissions).anyMatch(elPermissions::contains);
     }
 }
