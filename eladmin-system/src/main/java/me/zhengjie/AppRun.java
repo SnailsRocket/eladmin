@@ -33,6 +33,14 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Zheng Jie
  * @date 2018/11/15 9:20:19
+ * https://github.com/elunez/eladmin
+ * https://el-admin.vip/guide/hdsc.html#%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92
+ *
+ * eladmin-common 为系统的公共模块，各种工具类，公共配置存在该模块
+ * eladmin-system 为系统核心模块也是项目入口模块，也是最终需要打包部署的模块
+ * eladmin-logging 为系统的日志模块，其他模块如果需要记录日志需要引入该模块
+ * eladmin-tools 为第三方工具模块，包含：图床、邮件、云存储、本地存储、支付宝
+ * eladmin-generator 为系统的代码生成模块，代码生成的模板在 system 模块中
  *
  * Spring 实战3   p10
  * netty 实战
