@@ -1,5 +1,8 @@
 package me.xubo.test;
 
+import java.beans.ConstructorProperties;
+
+import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Data;
 
 /**
@@ -15,4 +18,10 @@ public class People {
     private String sex;
     private String address;
 
+    public People(String name, int age, String sex, String address) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.address = address;
+    }
 }
