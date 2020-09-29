@@ -3,6 +3,9 @@ package me.xubo.test;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -18,6 +21,8 @@ import io.jsonwebtoken.lang.Collections;
 public class JdkNewFeture {
 
     public static void main(String[] args) {
+
+
         List<People> list = new ArrayList<>();
         List<String> list_result = new LinkedList<>();
         list.add(new People("Druid",23,"男","1837039333"));
