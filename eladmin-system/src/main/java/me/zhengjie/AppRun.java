@@ -45,7 +45,13 @@ import org.springframework.web.bind.annotation.RestController;
  * Spring 实战3   p10
  * netty 实战
  *
- * 3
+ * 3 time
+ *
+ * CAP
+ * 一致性  Consistency
+ * 可用性  Availability
+ * 分区容忍性    Partition tolerance
+ * 2pc
  *
  *
  */
