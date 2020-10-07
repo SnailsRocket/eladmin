@@ -42,10 +42,13 @@ import org.springframework.web.bind.annotation.RestController;
  * eladmin-tools 为第三方工具模块，包含：图床、邮件、云存储、本地存储、支付宝
  * eladmin-generator 为系统的代码生成模块，代码生成的模板在 system 模块中
  *
- * Spring 实战3   p10
+ * Spring 实战3   p40
  * netty 实战
  *
  * 3 time
+ *
+ * gcs      max 5.4 + 0.4
+ * zlgcs    avg 4.8 + 0.3
  *
  * CAP
  * 一致性  Consistency
