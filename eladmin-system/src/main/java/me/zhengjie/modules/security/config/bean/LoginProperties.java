@@ -81,7 +81,7 @@ public class LoginProperties {
      */
     private Captcha switchCaptcha(LoginCode loginCode) {
         Captcha captcha;
-//        这里上锁了 控制并发冲突 生成验证码这个method
+//        这里使用了sychronized关键字，对LoginProperties 这个类上锁，在同一时间段上面只允许一个线程去判断验证码的类型 并创建对应类型的验证码对象
         synchronized (this) {
             switch (loginCode.getCodeType()) {
                 case arithmetic:

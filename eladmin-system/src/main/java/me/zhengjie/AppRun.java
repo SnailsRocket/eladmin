@@ -44,8 +44,15 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * Spring 实战3   p45
  * netty 实战
+ *
+ * CompletableFuture   https://www.jianshu.com/p/6f3ee90ab7d3/
+ * CountDownLatch
+ * 集合
+ * eladminpro  validcode 中 redis 乱码问题
  * 
  * https://www.geekdigging.com/2019/09/08/1787080252/   微服务事务
+ *
+ *
  *
  * 3 time
  *
