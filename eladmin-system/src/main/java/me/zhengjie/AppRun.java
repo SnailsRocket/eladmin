@@ -50,7 +50,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 集合
  * eladminpro  validcode 中 redis 乱码问题
  * 
- * https://www.geekdigging.com/2019/09/08/1787080252/   微服务事务
+ * 微服务事务   https://www.geekdigging.com/2019/09/08/1787080252/
  *
  *
  *
