@@ -65,6 +65,8 @@ import org.springframework.web.bind.annotation.RestController;
  * 分区容忍性    Partition tolerance
  * 2pc
  *
+ * 集合、分布式事务、redis 、 Spring 、SpringCloudAlibaba
+ * CompletableFeture 、
  *
  */
 @EnableAsync
