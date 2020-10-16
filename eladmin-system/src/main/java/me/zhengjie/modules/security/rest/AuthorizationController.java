@@ -99,6 +99,8 @@ public class AuthorizationController {
     public ResponseEntity<Object> login(@Validated @RequestBody AuthUserDto authUser, HttpServletRequest request) throws Exception {
         // 密码解密
         String password = RsaUtils.decryptByPrivateKey(RsaProperties.privateKey, authUser.getPassword());
+        System.out.println("解密前："+authUser.getPassword());
+        System.out.println(password);
         // 查询验证码
         String code = (String) redisUtils.get(authUser.getUuid());
         // 清除验证码
