@@ -48,6 +48,7 @@ public class ConfigBeanConfiguration {
     /**
      * 这类就是截取 application-dev.yml 配置文件里面的jwt 部分的属性，并加载到SecurityProperties这个Bean里面
      * @return
+     *
      */
     @Bean
     @ConfigurationProperties(prefix = "jwt", ignoreUnknownFields = true)

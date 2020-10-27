@@ -45,7 +45,8 @@ import java.util.*;
 
 /**
  * @author Zheng Jie
- *
+ * extends WebSecurityConfigurerAdapter  这个适配器
+ * 
  *
  */
 @Configuration

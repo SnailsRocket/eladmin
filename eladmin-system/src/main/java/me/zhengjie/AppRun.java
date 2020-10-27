@@ -43,7 +43,7 @@ import org.springframework.web.bind.annotation.RestController;
  * eladmin-generator 为系统的代码生成模块，代码生成的模板在 system 模块中
  *
  * Spring 实战3   完
- * netty 实战
+ * netty 实战     p8
  * 阿里巴巴Java嵩山版  OOP规约
  *
  * CompletableFuture   https://www.jianshu.com/p/6f3ee90ab7d3/
