@@ -45,6 +45,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Spring 实战3   完
  * netty 实战     p8
  * 阿里巴巴Java嵩山版  OOP规约
+ * 项目1.增加一个功能 基于OCR 识别 图片中的文字并填充到表单中
  *
  * CompletableFuture   https://www.jianshu.com/p/6f3ee90ab7d3/
  * CountDownLatch
