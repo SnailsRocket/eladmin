@@ -47,6 +47,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 阿里巴巴Java嵩山版  OOP规约
  * 项目1.增加一个功能 基于OCR 识别 图片中的文字并填充到表单中
  *
+ *
  * CompletableFuture   https://www.jianshu.com/p/6f3ee90ab7d3/
  * CountDownLatch
  * 集合
@@ -54,7 +55,9 @@ import org.springframework.web.bind.annotation.RestController;
  * 
  * 微服务事务   https://www.geekdigging.com/2019/09/08/1787080252/
  *
- *
+ * ProConSql 项目使用renren-generate 自动生成的前后端代码， 持久层框架使用的是Mybatis-plus
+ *  也生成了vue 页面，但是这个暂时不会用，先写 html+ js
+ *  弹出框暂未实现
  *
  * 3 time
  *
