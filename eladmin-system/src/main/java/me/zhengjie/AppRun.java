@@ -73,6 +73,27 @@ import org.springframework.web.bind.annotation.RestController;
  * 集合、分布式事务、redis 、 Spring 、SpringCloudAlibaba
  * CompletableFeture 、
  *
+ * redis 持久化方式 ： RDF(默认)  AOF
+ * 当同时开启两种持久化方式的时候，默认执行AOF 持久化方案
+ * RDF 与 AOF 的区别
+ *   RDF是过一段时间就持久化，将数据写入 dump.rdb这个文件中
+ *   AOF 是将 redis 的命令(写命令 ，查命令应该不会写)写成日志，记录到磁盘里面，当redis重启的时候回去执行这些日志命令
+ *   AOF 比 RDF 文件大，且恢复速度慢， 数据大时，AOF比RDF启动效率低
+ * redis 的内存淘汰策略 (看具体的业务场景)
+ *   当内存不足的时候，移除最近最少使用的key (一般都是采用此种方式)
+ *   当内存不足的时候，随机移除key
+ *   当内存不足的时候，随机移除设置过期时间的key (设置键过期空间的操作方式)
+ *   当内存不足的时候，移除设置过期时间的key中快要过期的key
+ * redis 主从复制
+ *   master 节点的数据会复制到 slave节点
+ * redis 哨兵模式
+ *   哨兵至少需要三个实例， 哨兵+ 主从 只是保证了 redis集群的高可用，不能保证数据的零丢失
+ *   哨兵集群模式 当主节点(master) 挂掉了，salve节点会通过选举，选出新的master节点，
+ *   主服务器负责写 ，从服务器负责读数据
+ * redis 缓存雪崩
+ *    缓存雪崩是指缓存同一时间内大面积失效，所有的请求都会打到数据库上
+ * redis 缓存击穿
+ *    指缓存和数据库中都没有的数据，导致所有的请求都打到数据库上
  */
 @EnableAsync
 @RestController
