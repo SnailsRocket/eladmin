@@ -39,6 +39,9 @@ import java.util.*;
 @Service
 public class MonitorServiceImpl implements MonitorService {
 
+    /**
+     * 数字格式化类
+     */
     private final DecimalFormat df = new DecimalFormat("0.00");
 
     @Override

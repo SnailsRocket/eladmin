@@ -20,6 +20,7 @@ import java.util.List;
 /**
  * @author Zheng Jie
  * @date 2018-11-23
+ * Mapper 工具类 将entity 转成 dto  dto转成entity
  */
 public interface BaseMapper<D, E> {
 

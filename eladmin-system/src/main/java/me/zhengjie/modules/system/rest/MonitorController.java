@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author Zheng Jie
  * @date 2020-05-02
+ * 系统监控管理会定时向后端发送请求，以获取实时的系统资源信息
  */
 @RestController
 @RequiredArgsConstructor

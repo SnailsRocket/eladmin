@@ -28,6 +28,7 @@ import java.util.*;
 /**
  * @author Zheng Jie
  * @date 2019-6-4 14:59:48
+ * 查询工具类
  */
 @Slf4j
 @SuppressWarnings({"unchecked","all"})
@@ -38,7 +39,7 @@ public class QueryHelp {
         if(query == null){
             return cb.and(list.toArray(new Predicate[0]));
         }
-        // 数据权限验证
+        // 数据权限验证  获取DataPermission 自定义注解
         DataPermission permission = query.getClass().getAnnotation(DataPermission.class);
         if(permission != null){
             // 获取数据权限
