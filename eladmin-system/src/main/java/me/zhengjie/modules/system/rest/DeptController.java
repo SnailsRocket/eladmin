@@ -27,6 +27,8 @@ import me.zhengjie.modules.system.service.dto.DeptDto;
 import me.zhengjie.modules.system.service.dto.DeptQueryCriteria;
 import me.zhengjie.utils.PageUtil;
 import me.zhengjie.utils.ThrowableUtil;
+
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -62,6 +64,11 @@ public class DeptController {
     /**
      * @PreAuthorize 这个注解  鉴权 调用当前方法需要 'user:list','dept:list' 这两个权限
      * 用户 角色 权限
+     * 15000 + 4000   19000
+     *  2000
+     *  2000 * 6 12000 4
+     *  2000 * 3 6000
+     *  20000
      *
      * @param criteria
      * @return

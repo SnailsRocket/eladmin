@@ -73,6 +73,13 @@ public class UserServiceImpl implements UserService {
         return userMapper.toDto(users);
     }
 
+    /**
+     * TODO: select 为什么需要加上 @Transactional
+     * @param id ID
+     * @return
+     * 10000 3000 3000 3000 5000
+     * 25000   20000
+     */
     @Override
     @Cacheable(key = "'id:' + #p0")
     @Transactional(rollbackFor = Exception.class)

@@ -94,6 +94,7 @@ import org.springframework.web.bind.annotation.RestController;
  *    缓存雪崩是指缓存同一时间内大面积失效，所有的请求都会打到数据库上
  * redis 缓存击穿
  *    指缓存和数据库中都没有的数据，导致所有的请求都打到数据库上
+ * 本是后山人，偶做前堂客
  */
 @EnableAsync
 @RestController

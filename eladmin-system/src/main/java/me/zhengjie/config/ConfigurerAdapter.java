@@ -29,6 +29,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  *
  * @author Zheng Jie
  * @date 2018-11-30
+ * CorsFilter 这个Bean 在me.zhengjie.modules.security.config 包下 SecurityConfig 类中被使用
+ *
  */
 @Configuration
 @EnableWebMvc
@@ -41,6 +43,11 @@ public class ConfigurerAdapter implements WebMvcConfigurer {
         this.properties = properties;
     }
 
+    /**
+     * 放开所有的Origin (源) Header Method
+     * setAllowCredentials
+     * @return
+     */
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

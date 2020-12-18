@@ -46,7 +46,7 @@ import java.util.*;
 /**
  * @author Zheng Jie
  * extends WebSecurityConfigurerAdapter  这个适配器
- * 
+ * CorsFilter 这个Bean是在 System模块下 config目录下的ConfigurerAdapter 类里面定义的 Bean
  *
  */
 @Configuration

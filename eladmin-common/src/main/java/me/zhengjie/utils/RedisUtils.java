@@ -37,6 +37,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisUtils {
     private static final Logger log = LoggerFactory.getLogger(RedisUtils.class);
     private RedisTemplate<Object, Object> redisTemplate;
+    // 获取配置里面预设的初始值
     @Value("${jwt.online-key}")
     private String onlineKey;
 
